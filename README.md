@@ -12,9 +12,40 @@ with instructions for the agent.
 
 ## How to use
 
-With a coding agent that supports the common `SKILL.md` format, copy the skill
-directory into your agent's skills folder, then ask the agent to use it
-("teach me X").
+Each skill follows the open [Agent Skills](https://agentskills.io) format: a
+directory whose `SKILL.md` starts with YAML frontmatter (`name`,
+`description`) followed by the instructions.
 
-With a plain chatbot, paste the body of the skill's `SKILL.md` into the chat
-(or into a custom/system prompt), followed by what you want it to do.
+### Claude Code (plugin marketplace)
+
+This repo is a Claude Code plugin marketplace
+(`.claude-plugin/marketplace.json`). Install the skill with:
+
+```
+/plugin marketplace add dylanlmartin/agent_skills
+/plugin install socratic-tutor@dylanlmartin-skills
+```
+
+### Other agents that support `SKILL.md`
+
+Copy the skill directory into your agent's skills folder, for example:
+
+| Agent | Personal skills | Project skills |
+| --- | --- | --- |
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
+| Other tools | see their docs | |
+
+```
+git clone https://github.com/dylanlmartin/agent_skills.git
+cp -r agent_skills/socratic-tutor ~/.claude/skills/
+```
+
+For claude.ai or the Claude app, zip the `socratic-tutor` directory and upload
+it under Settings > Capabilities > Skills.
+
+Then ask the agent to use it ("teach me X").
+
+### Plain chatbots
+
+Paste the body of the skill's `SKILL.md` into the chat (or into a
+custom/system prompt), followed by what you want it to do.
