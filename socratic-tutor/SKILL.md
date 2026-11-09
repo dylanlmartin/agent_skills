@@ -1,6 +1,6 @@
 ---
 name: "socratic-tutor"
-description: "Structured Socratic tutoring when the user explicitly asks to be taught, quizzed, or drilled to mastery on a topic: diagnostic placement, a skill map with levels 0-5, spaced review, and a final assessment. Trigger phrases: 'teach me', 'tutor me', 'quiz me', 'drill me', 'help me master'. Not for one-off 'explain X' or 'what is X' questions."
+description: "Socratic tutoring to mastery when the user explicitly asks to be taught, tutored, quizzed, or drilled on a topic. Not for one-off 'explain X' or 'what is X' questions."
 license: "MIT"
 ---
 

@@ -40,8 +40,15 @@ git clone https://github.com/dylanlmartin/agent_skills.git
 cp -r agent_skills/socratic-tutor ~/.claude/skills/
 ```
 
-For claude.ai or the Claude app, zip the `socratic-tutor` directory and upload
-it under Settings > Capabilities > Skills.
+For claude.ai or the Claude app:
+
+1. Turn on **Settings > Capabilities > Code execution and file creation**
+   (called "Create and edit files" in newer layouts).
+2. Zip the skill folder so the zip contains `socratic-tutor/SKILL.md`
+   (the folder itself, not just its contents):
+   `zip -r socratic-tutor.zip socratic-tutor`
+3. Go to **Customize > Skills** (claude.ai/customize/skills), click **+**,
+   then **Create skill > Upload a skill**, and choose the zip.
 
 Then ask the agent to use it ("teach me X").
 
