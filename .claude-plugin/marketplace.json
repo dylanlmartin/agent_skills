@@ -1,0 +1,20 @@
+{
+  "name": "dylanlmartin-skills",
+  "owner": {
+    "name": "dylanlmartin"
+  },
+  "metadata": {
+    "description": "A collection of Agent Skills (SKILL.md format) for AI agents and chatbots.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "socratic-tutor",
+      "description": "Strict Socratic tutor: diagnostic placement, a skill map with levels 0-5, one question at a time, spaced review, and a final assessment.",
+      "source": "./",
+      "strict": false,
+      "license": "MIT",
+      "skills": ["./socratic-tutor"]
+    }
+  ]
+}
